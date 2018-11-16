@@ -1,0 +1,447 @@
+<html>
+
+<head>
+
+<style>
+
+.annotation_table {
+    color: #000000;
+    font-family: monospace;
+    margin: 5px;
+    width: 100%;
+}
+
+/* override JupyterLab style */
+.annotation_table td {
+    text-align: left;
+    background-color: transparent; 
+    padding: 1px;
+}
+
+.annotation_table code
+{
+    background-color: transparent; 
+    white-space: normal;
+}
+
+/* End override JupyterLab style */
+
+tr:hover {
+    background-color: rgba(92, 200, 249, 0.25);
+}
+
+td.object_tag summary ,
+td.lifted_tag summary{
+    font-weight: bold;
+    display: list-item;
+}
+
+span.lifted_tag {
+    color: #00cc33;
+}
+
+span.object_tag {
+    color: #cc3300;
+}
+
+
+td.lifted_tag {
+    background-color: #cdf7d8;
+}
+
+td.object_tag {
+    background-color: #ffd3d3;
+}
+
+code.ir_code {
+    color: grey;
+    font-style: italic;
+}
+
+.metadata {
+    border-bottom: medium solid black;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+}
+
+.annotations {
+padding: 5px;
+}
+
+.hidden {
+display: none;
+}
+
+.buttons {
+padding: 10px;
+cursor: pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    
+
+        
+
+        <div class="metadata">
+        Function name: np_my_sum<br />
+        in file: short_test.py<br />
+        with signature: (array(int64, 1d, C),) -&gt; int64
+        </div>
+
+        <div class="annotations">
+
+        <table class="annotation_table tex2jax_ignore">
+                    <tr><td class="">
+                        <details>
+                            <summary>
+                                <code>
+                                4:
+                                @jit
+                                </code>
+                            </summary>
+                            <table class="annotation_table">
+                                <tbody>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;
+                                            label 0<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr></tbody>
+                            </table>
+                            </details>
+                    </td></tr>
+                <tr><td style=" padding-left: 22px;" class="">
+                        <code>
+                            5:
+                            def np_my_sum(a):
+                        </code>
+                    </td></tr>
+                    <tr><td class="">
+                        <details>
+                            <summary>
+                                <code>
+                                6:
+                                &nbsp;&nbsp;&nbsp;&nbsp;s=0
+                                </code>
+                            </summary>
+                            <table class="annotation_table">
+                                <tbody>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;a = arg(0, name=a)  :: array(int64, 1d, C)<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$const0.1 = const(int, 0)  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;s = $const0.1  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $const0.1<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;jump 6<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            label 6<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr></tbody>
+                            </table>
+                            </details>
+                    </td></tr>
+                
+                    <tr><td class="">
+                        <details>
+                            <summary>
+                                <code>
+                                7:
+                                &nbsp;&nbsp;&nbsp;&nbsp;for i in a:
+                                </code>
+                            </summary>
+                            <table class="annotation_table">
+                                <tbody>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;jump 9<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            label 9<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$9.2 = getiter(value=a)  :: iter(array(int64, 1d, C))<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del a<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$phi13.1 = $9.2  :: iter(array(int64, 1d, C))<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $9.2<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;jump 13<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            label 13<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$13.2 = iternext(value=$phi13.1)  :: pair&lt;int64, bool&gt;<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$13.3 = pair_first(value=$13.2)  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$13.4 = pair_second(value=$13.2)  :: bool<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $13.2<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$phi16.1 = $13.3  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$phi32.1 = $13.3  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $phi32.1<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $13.3<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$phi32.2 = $phi13.1  :: iter(array(int64, 1d, C))<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $phi32.2<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;branch $13.4, 16, 32<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            label 16<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $13.4<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;i = $phi16.1  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $phi16.1<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr></tbody>
+                            </table>
+                            </details>
+                    </td></tr>
+                
+                    <tr><td class="">
+                        <details>
+                            <summary>
+                                <code>
+                                8:
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s+=i
+                                </code>
+                            </summary>
+                            <table class="annotation_table">
+                                <tbody>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$16.4 = inplace_binop(fn=+=, lhs=s, static_rhs=&lt;object object at 0x7f2dabb50150&gt;, immutable_fn=+, static_lhs=&lt;object object at 0x7f2dabb50150&gt;, rhs=i)  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del i<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;s = $16.4  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $16.4<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;jump 13<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            label 32<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $phi16.1<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $phi13.1<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del $13.4<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;jump 33<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            label 33<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr></tbody>
+                            </table>
+                            </details>
+                    </td></tr>
+                
+                    <tr><td class="">
+                        <details>
+                            <summary>
+                                <code>
+                                9:
+                                &nbsp;&nbsp;&nbsp;&nbsp;return s
+                                </code>
+                            </summary>
+                            <table class="annotation_table">
+                                <tbody>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;$33.2 = cast(value=s)  :: int64<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;del s<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr>
+                                        <tr class="ir_code func0_ir">
+                                            <td><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;return $33.2<span class="object_tag"></span>
+                                            </code>
+                                            </td>
+                                        </tr></tbody>
+                            </table>
+                            </details>
+                    </td></tr>
+                </table>
+        </div>
+
+        <br /><br /><br />
+
+    
+
+</body>
+
+</html>
